@@ -25,6 +25,7 @@ class Change : NSObject, NSCoding, Mappable{
 	var submittable : Bool?
 	var updated : String?
     var labels : [String: Any]?
+    var work_in_progress :Bool? = false
 
 	class func newInstance(map: Map) -> Mappable?{
 		return Change()
@@ -51,6 +52,7 @@ class Change : NSObject, NSCoding, Mappable{
 		submittable <- map["submittable"]
 		updated <- map["updated"]
 		labels <- map["labels"]
+        work_in_progress <- map["work_in_progress"]
 	}
 
     /**
@@ -75,7 +77,7 @@ class Change : NSObject, NSCoding, Mappable{
          subject = aDecoder.decodeObject(forKey: "subject") as? String
          submittable = aDecoder.decodeObject(forKey: "submittable") as? Bool
          updated = aDecoder.decodeObject(forKey: "updated") as? String
-
+         work_in_progress = aDecoder.decodeObject(forKey: "work_in_progress") as? Bool
 	}
 
     /**
@@ -132,6 +134,9 @@ class Change : NSObject, NSCoding, Mappable{
 		if updated != nil{
 			aCoder.encode(updated, forKey: "updated")
 		}
+        if work_in_progress != nil {
+            aCoder.encode(work_in_progress,forKey: "work_in_progress")
+        }
 
 	}
 

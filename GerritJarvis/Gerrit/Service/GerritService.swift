@@ -20,6 +20,14 @@ class GerritService {
         self.password = password
         self.baseUrl = baseUrl
     }
+    
+    func getUser()->String{
+        return self.user
+    }
+    
+    func getBaseUrl()->String{
+        return self.baseUrl
+    }
 
     func verifyAccount(_ completion: @escaping (Author?, Int?) -> Void) {
         let url = baseUrl + "/a/accounts/self"

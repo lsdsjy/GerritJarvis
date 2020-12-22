@@ -471,3 +471,22 @@ extension ReviewListDataController {
     }
 
 }
+
+// MARK: - getter for filtering changes
+extension ReviewListDataController {
+    public func filterReviewsByOwnerName(_ name: String) -> [Change]{
+        if let filteredChanges = self.changes?.filter({ (someChange:Change) in return someChange.owner?.name == name }) {
+            return filteredChanges
+        }else{
+            return []
+        }
+    }
+    
+    public func getCurrentUserName()->String{
+        return self.gerritService?.getUser() ?? ""
+    }
+    
+    public func getBaseUrl()->String{
+        return self.gerritService?.getBaseUrl() ?? ""
+    }
+}

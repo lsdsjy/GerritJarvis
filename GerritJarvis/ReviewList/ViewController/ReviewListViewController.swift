@@ -93,7 +93,17 @@ class ReviewListViewController: NSViewController {
     }
     
     @IBAction func copyButtonClicked(_ sender: Any){
-        
+        let userName = dataController.getCurrentUserName()
+        // TODO trim url end's slash
+        let baseUrl = dataController.getBaseUrl()
+        let relatedChanges = dataController.filterReviewsByOwnerName(userName).filter({(someChange:Change) in return someChange.work_in_progress == false})
+        let formattedChanges = relatedChanges.map({(someChange:Change)->String in
+                return " \(someChange.number ?? 0): \(someChange.subject ?? "") | \(baseUrl)/c/\(someChange.project ?? "")/+/\(someChange.number ?? 0)"
+            }).joined(separator: "\n")
+        let pasteboard = NSPasteboard.general
+        pasteboard.declareTypes([.string], owner: nil)
+        pasteboard.setString(formattedChanges, forType: .string)
+        debugPrint("copied \(formattedChanges)")
     }
 
     @IBAction func aboutItemClicked(_ sender: NSMenuItem) {
