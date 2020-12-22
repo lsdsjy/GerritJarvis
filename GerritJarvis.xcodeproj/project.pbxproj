@@ -60,9 +60,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1FF6B182DE0D111FB41DB06F /* Pods-GerritJarvis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GerritJarvis.debug.xcconfig"; path = "Target Support Files/Pods-GerritJarvis/Pods-GerritJarvis.debug.xcconfig"; sourceTree = "<group>"; };
+		4D83C769CF4DEF739D6CFE07 /* Pods-GerritJarvis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GerritJarvis.debug.xcconfig"; path = "Target Support Files/Pods-GerritJarvis/Pods-GerritJarvis.debug.xcconfig"; sourceTree = "<group>"; };
+		56BF639FB24C47714F7DD8B3 /* Pods-GerritJarvis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GerritJarvis.release.xcconfig"; path = "Target Support Files/Pods-GerritJarvis/Pods-GerritJarvis.release.xcconfig"; sourceTree = "<group>"; };
 		9B26E29560B9E746C992026B /* Pods_GerritJarvis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GerritJarvis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE23891BEBE2BB3A0F844D90 /* Pods-GerritJarvis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GerritJarvis.release.xcconfig"; path = "Target Support Files/Pods-GerritJarvis/Pods-GerritJarvis.release.xcconfig"; sourceTree = "<group>"; };
 		D207F0DC2272BBA4000EB2B4 /* Avatar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Avatar.swift; sourceTree = "<group>"; };
 		D207F0DF2272BE06000EB2B4 /* GerritResponseUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GerritResponseUtils.swift; sourceTree = "<group>"; };
 		D2350ADF2180616A0002A17D /* GerritJarvis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GerritJarvis.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,8 +121,8 @@
 		16F9A22B1FC8DDE16E5F6120 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1FF6B182DE0D111FB41DB06F /* Pods-GerritJarvis.debug.xcconfig */,
-				CE23891BEBE2BB3A0F844D90 /* Pods-GerritJarvis.release.xcconfig */,
+				4D83C769CF4DEF739D6CFE07 /* Pods-GerritJarvis.debug.xcconfig */,
+				56BF639FB24C47714F7DD8B3 /* Pods-GerritJarvis.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -706,7 +706,7 @@
 		};
 		D2350AF02180616B0002A17D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1FF6B182DE0D111FB41DB06F /* Pods-GerritJarvis.debug.xcconfig */;
+			baseConfigurationReference = 4D83C769CF4DEF739D6CFE07 /* Pods-GerritJarvis.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "";
@@ -733,7 +733,7 @@
 		};
 		D2350AF12180616B0002A17D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CE23891BEBE2BB3A0F844D90 /* Pods-GerritJarvis.release.xcconfig */;
+			baseConfigurationReference = 56BF639FB24C47714F7DD8B3 /* Pods-GerritJarvis.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "";

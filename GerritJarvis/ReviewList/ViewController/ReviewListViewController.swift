@@ -91,6 +91,10 @@ class ReviewListViewController: NSViewController {
         point.x = point.x + sender.frame.size.width
         settingMenu.popUp(positioning: nil, at: point, in: view)
     }
+    
+    @IBAction func copyButtonClicked(_ sender: Any){
+        
+    }
 
     @IBAction func aboutItemClicked(_ sender: NSMenuItem) {
         NSApplication.shared.orderFrontStandardAboutPanel()
